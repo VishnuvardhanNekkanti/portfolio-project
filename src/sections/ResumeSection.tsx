@@ -50,8 +50,8 @@ const ResumeSection = () => {
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center mb-8">
             <motion.a
-              href="/path-to-your-resume.pdf"
-              download
+              href="resume.pdf"
+              download = "Vishnu_nekkanti_resume.pdf"
               className="group relative inline-flex items-center gap-2 px-6 py-3 text-lg font-medium text-white"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
