@@ -68,7 +68,7 @@ function App() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 pt-25">
-        <div id="home" className="pt-[100px]"><HomeSection /></div>
+        <div id="home" className="pt-[0px]"><HomeSection /></div>
 <div id="projects" className="pt-[100px]"><ProjectsSection /></div>
 <div id="skills" className="pt-[100px]"><SkillsSection /></div>
 <div id="resume" className="pt-[100px]"><ResumeSection /></div>
