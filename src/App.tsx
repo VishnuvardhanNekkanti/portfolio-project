@@ -31,6 +31,19 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Effect to update document title dynamically
+  useEffect(() => {
+    const titles: { [key: string]: string } = {
+      home: "Vishnu Nekkanti",
+      projects: "Vishnu Nekkanti - Projects",
+      skills: "Vishnu Nekkanti - Skills",
+      resume: "Vishnu Nekkanti - Resume",
+      contact: "Vishnu Nekkanti - Contact",
+    };
+
+    document.title = titles[activeSection] || "Vishnu Nekkanti";
+  }, [activeSection]);
+
   const navItems = [
     { id: 'home', Icon: Home, label: 'Home' },
     { id: 'projects', Icon: Briefcase, label: 'Projects' },
@@ -54,12 +67,13 @@ function App() {
       <Navbar items={navItems} activeSection={activeSection} />
 
       {/* Main Content */}
-      <div className="container mx-auto px-4">
-        <HomeSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ResumeSection />
-        <ContactSection />
+      <div className="container mx-auto px-4 pt-25">
+        <div id="home" className="pt-[100px]"><HomeSection /></div>
+<div id="projects" className="pt-[100px]"><ProjectsSection /></div>
+<div id="skills" className="pt-[100px]"><SkillsSection /></div>
+<div id="resume" className="pt-[100px]"><ResumeSection /></div>
+<div id="contact" className="pt-[100px]"><ContactSection /></div>
+
       </div>
     </div>
   );
