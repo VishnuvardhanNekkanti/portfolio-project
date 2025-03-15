@@ -57,7 +57,7 @@ const ContactSection = () => {
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/nekkanti-vishnu-vardhan-chowdary-5236b326a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-400 hover:text-purple-500 transition-colors"
@@ -66,7 +66,7 @@ const ContactSection = () => {
                 <span>LinkedIn</span>
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/VishnuvardhanNekkanti"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-400 hover:text-purple-500 transition-colors"
