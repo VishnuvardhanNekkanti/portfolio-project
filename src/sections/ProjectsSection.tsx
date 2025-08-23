@@ -4,22 +4,25 @@ import { Github, ExternalLink } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Book Store App',
-      description: 'A full-stack e-commerce application for buying and selling books.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      title: 'E-Library Management Web Application',
+      description: 'Developed an intuitive e-library platform with Spring Boot, enabling users to view, add, and manage books through a clean, responsive UI. Users can browse available books, while librarians can add or delete books from the collection.',
+      technologies: ['Spring Boot', 'HTML/CSS', 'Thymeleaf', 'MySQL'],
+      image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80', // Library image
+      github: 'https://github.com/VishnuvardhanNekkanti/booksStore.git',
     },
     {
-      title: 'Help Desk Ticket System',
-      description: 'A ticket management system for handling customer support requests.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      image: 'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      title: 'Online Voting System',
+      description: 'Built a secure online voting platform with Spring Boot, MySQL, and REST APIs, implementing JWT authentication, password encryption, and role-based access. Designed CRUD operations for voters/candidates, result display, and following MVC architecture.',
+      technologies: ['Spring Boot', 'MySQL', 'REST API'],
+      image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80', // Voting image
+      github: 'https://github.com/VishnuvardhanNekkanti/onlinevotingsystem.git',
     },
     {
-      title: 'Python Weather App',
-      description: 'A weather application that provides real-time weather updates.',
-      technologies: ['Python', 'Django', 'OpenWeather API'],
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+      title: 'Notes App',
+      description: 'Developed a MERN-based Notes App with MongoDB, Express.js, React, and Node.js, featuring CRUD functionality and user authentication. Created a responsive React UI with RESTful backend APIs and integrated MongoDB for persistent note storage and scalable file structure.',
+      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+      image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80', // Notes app image
+      github: 'https://github.com/VishnuvardhanNekkanti/NoteIt.git',
     },
   ];
 
@@ -40,7 +43,7 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="glass rounded-xl overflow-hidden group"
+              className="glass rounded-xl overflow-hidden group flex flex-col h-full"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -62,9 +65,11 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-auto">
                   <a
-                    href="#"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-gray-400 hover:text-purple-500 transition-colors"
                   >
                     <Github size={20} />

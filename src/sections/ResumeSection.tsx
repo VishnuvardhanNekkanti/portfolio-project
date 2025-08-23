@@ -30,11 +30,7 @@ const ResumeSection = () => {
     },
   ];
 
-  const profiles = [
-    { platform: 'LeetCode', username: '@vishnuvardhan', Icon: Code2 },
-    { platform: 'CodeChef', username: '@vishnu123', Icon: Code2 },
-    { platform: 'CodeForces', username: '@vvn_code', Icon: Code2 },
-  ];
+  // Coding Profiles section removed
 
   return (
     <section id="resume" className="min-h-screen py-20">
@@ -51,15 +47,16 @@ const ResumeSection = () => {
           <div className="flex justify-center mb-8">
             <motion.a
               href="resume.pdf"
-              download = "Vishnu_nekkanti_resume.pdf"
+              download="Vishnu_nekkanti_resume.pdf"
               className="group relative inline-flex items-center gap-2 px-6 py-3 text-lg font-medium text-white"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
+              style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '0.75rem' }}
             >
               <Download className="w-5 h-5" />
               Download Resume
               <span className="absolute -inset-0.5 -z-10 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-75" />
+              <span className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 opacity-75 group-hover:opacity-0 transition-opacity duration-300" />
             </motion.a>
           </div>
 
@@ -92,28 +89,7 @@ const ResumeSection = () => {
             </div>
           </div>
 
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-6 font-['Poppins'] flex items-center gap-2">
-              <Code2 className="text-purple-500" />
-              Coding Profiles
-            </h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {profiles.map((profile, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="glass p-4 rounded-xl text-center group hover:bg-purple-500/10 transition-colors"
-                >
-                  <profile.Icon className="w-8 h-8 mx-auto mb-2 text-purple-500" />
-                  <h4 className="font-semibold text-purple-500">{profile.platform}</h4>
-                  <p className="text-gray-400">{profile.username}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          {/* Coding Profiles section removed */}
         </div>
       </motion.div>
     </section>

@@ -19,15 +19,15 @@ const ContactSection = () => {
     e.preventDefault();
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_6u6fex3',
+        'template_k50hmm4',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_email: 'vishnunekkanti.1245@gmail.com',
         },
-        'YOUR_PUBLIC_KEY'
+        'Dj4gVzlFEJDZwZs5t'
       );
       setStatus({ type: 'success', message: 'Message sent successfully!' });
       setFormData({ name: '', email: '', message: '' });
