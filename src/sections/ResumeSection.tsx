@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  Code2, 
+import {
+  GraduationCap,
+  Code2,
   Download,
   Award,
   BookOpen,
@@ -42,7 +42,7 @@ const ResumeSection = () => {
         className="container mx-auto"
       >
         <h2 className="text-4xl font-bold text-center mb-12 font-['Poppins']">Resume</h2>
-        
+
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center mb-8">
             <motion.a
